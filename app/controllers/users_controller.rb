@@ -7,7 +7,6 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
     else
-      flash.now[:]
       render 'new'
     end
   end
