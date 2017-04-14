@@ -30,4 +30,8 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_select "div.alert-success"
     assert is_logged_in?
   end
+
+  test 'authenticated? should return false for a user with nil digest' do
+    assert_not @user.athenticated?("")
+  end
 end
