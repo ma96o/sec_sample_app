@@ -13,4 +13,9 @@ class User < ApplicationRecord
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
   end
+
+  # ランダムなトークン(文字列)を返す
+  def self.new_token
+    SecureRandom.urlsafe_base64
+  end
 end
