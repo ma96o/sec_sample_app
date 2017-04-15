@@ -2,6 +2,10 @@ require 'test_helper'
 
 class UsersSignupTest < ActionDispatch::IntegrationTest
 
+  def setup
+    @user = users(:michael)
+  end
+
   test "invalid signup information" do
     get signup_path
     assert_no_difference "User.count" do
@@ -32,6 +36,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
   end
 
   test 'authenticated? should return false for a user with nil digest' do
-    assert_not @user.athenticated?("")
+    assert_not @user.authenticated?("")
   end
 end
