@@ -1,9 +1,11 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+orange:
+  content: "I just ate an orange!"
 
-one:
-  content: MyText
-  user: one
+tau_manifesto:
+  content: "Check out the @tauday site by @mhartl: http://tauday.com"
 
-two:
-  content: MyText
-  user: two
+cat_video:
+  content: "Sad cats are sad: http://youtu.be/PKffm2uI4dk"
+
+most_recent:
+  content: "Writing a short test"
