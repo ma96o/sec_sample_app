@@ -1,11 +1,21 @@
 orange:
   content: "I just ate an orange!"
+  user: michael
 
 tau_manifesto:
   content: "Check out the @tauday site by @mhartl: http://tauday.com"
+  user: michael
 
 cat_video:
   content: "Sad cats are sad: http://youtu.be/PKffm2uI4dk"
+  user: michael
 
 most_recent:
   content: "Writing a short test"
+  user: michael
+
+<% 30.times do |n| %>
+micropost_<%= n %>:
+  content: <%= Faker::Lorem.sentence(5) %>
+  user: michael
+<% end %>
